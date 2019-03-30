@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="input-group">
+    <button class="btn btn-success" type="button">ชื่อ</button>
+  <input type="text" class="form-control" [(ngModel)] = "name"name=sdfghj
+  placeholder="" aria-label="" aria-describedby="basic-addon1">
+  <div class="input-group-append">
+
+  </div>
+</div>
+สวัสดี {{name}}
+<h3 class="text-center">รายชื่อนิสิตมหาวิทยาลัยเกษตรศาสตร์</h3>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>ID</th>
+      <th>Student Name</th>
+      <th>Weight</th>
+      <th>Height</th>
+      <th>BMI</th>
+      <th>ผลลัพธ์</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let s of studentlist;">
+    <td>{{s.studentId}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.weight}}</td>
+      <td>{{s.height}}</td>
+      <td>{{s.bmi}}</td> 
+      <td *ngIf= "s.bmi<20">ผอม</td>
+      <td *ngIf= "s.bmi==20">สมบูรณ์</td>
+      <td *ngIf= "s.bmi>20">อีอ้วน;;;</td>
+
